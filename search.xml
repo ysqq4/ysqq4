@@ -8,7 +8,7 @@
       <link href="/2023/10/04/upanicon/"/>
       <url>/2023/10/04/upanicon/</url>
       
-        <content type="html"><![CDATA[<h1 id="U盘自定义图标"><a href="#U盘自定义图标" class="headerlink" title="U盘自定义图标"></a>U盘自定义图标</h1><code class="yaml"><pre>创建一个新文件夹命名为autorun.inf内容为[autorun]ICON=favicon.ico,0<pre></code><ul><li>其中的favicon.ico图片需要自己去免费的网站去转化</li><li>百度icon图片转换，找免费的就行</li><li>接着把autorun.inf和favicon.ico图片放入U盘根目录</li><li>注意:一定是要放在根目录</li><li>接着右键点击其中一个属性-&gt;隐藏-&gt;确定</li><li>最后把U盘拔出重新插入就大功告成了。</li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="U盘自定义图标"><a href="#U盘自定义图标" class="headerlink" title="U盘自定义图标"></a>U盘自定义图标</h1><pre><code class="yaml">创建一个新文件夹命名为autorun.inf内容为[autorun]ICON=favicon.ico,0</code><pre>- 其中的favicon.ico图片需要自己去免费的网站去转化- 百度icon图片转换，找免费的就行- 接着把autorun.inf和favicon.ico图片放入U盘根目录- 注意:一定是要放在根目录- 接着右键点击其中一个属性->隐藏->确定- 最后把U盘拔出重新插入就大功告成了。]]></content>
       
       
       <categories>
