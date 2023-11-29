@@ -6,7 +6,7 @@
   <link href="http://ysqq4.github.io/atom.xml" rel="self"/>
   
   <link href="http://ysqq4.github.io/"/>
-  <updated>2023-11-08T09:27:19.916Z</updated>
+  <updated>2023-11-29T08:01:11.069Z</updated>
   <id>http://ysqq4.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>取消windows11推荐项目</title>
+    <link href="http://ysqq4.github.io/2023/11/29/tjxm/"/>
+    <id>http://ysqq4.github.io/2023/11/29/tjxm/</id>
+    <published>2023-11-29T07:50:57.000Z</published>
+    <updated>2023-11-29T08:01:11.069Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="取消电脑开始菜单推荐项"><a href="#取消电脑开始菜单推荐项" class="headerlink" title="取消电脑开始菜单推荐项"></a>取消电脑开始菜单推荐项</h1><ol><li>点击下面的开始菜单，选择“设置”。</li><li>点击个性化，选择“开始”选项。</li><li>关闭“显示最近添加的应用”。</li><li>关闭“显示最近添加的应用程序”。</li><li>打开开始菜单，“推荐项目”已经关闭。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;取消电脑开始菜单推荐项&quot;&gt;&lt;a href=&quot;#取消电脑开始菜单推荐项&quot; class=&quot;headerlink&quot; title=&quot;取消电脑开始菜单推荐项&quot;&gt;&lt;/a&gt;取消电脑开始菜单推荐项&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;点击下面的开始菜单，选择“设置”。&lt;/li&gt;
+&lt;li&gt;点</summary>
+      
+    
+    
+    
+    <category term="电脑设置" scheme="http://ysqq4.github.io/categories/%E7%94%B5%E8%84%91%E8%AE%BE%E7%BD%AE/"/>
+    
+    
+    <category term="电脑" scheme="http://ysqq4.github.io/tags/%E7%94%B5%E8%84%91/"/>
+    
+  </entry>
   
   <entry>
     <title>U盘自定义图标</title>
