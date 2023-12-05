@@ -126,8 +126,7 @@ code {
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
     font-size: 0.91rem;
     color: #e96900;
-    /* f8f8f8 */
-    background-color: #151414;
+    background-color: #f8f8f8;
     border-radius: 2px;
 }
 
