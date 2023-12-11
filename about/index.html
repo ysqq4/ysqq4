@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
+    <!-- 添加动态诗词 -->
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="藤原豆腐店" type="application/atom+xml">
 </head>
@@ -343,7 +345,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                碧蓝航线
+                    subtitle
                 
             </div>
 
@@ -641,7 +643,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["QQ","博客","电脑","U盘"]
+                data: ["博客","QQ","电脑","U盘"]
             }
         ],
         yAxis: [
@@ -824,14 +826,14 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/QQ/">
-                <span class="chip center-align waves-effect waves-light chip-default">QQ</span>
+            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                <span class="chip center-align waves-effect waves-light chip-default">博客</span>
             </a>
             
             
             
-            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                <span class="chip center-align waves-effect waves-light chip-default">博客</span>
+            <a href="/tags/QQ/">
+                <span class="chip center-align waves-effect waves-light chip-default">QQ</span>
             </a>
             
             
@@ -1226,7 +1228,7 @@ $(function () {
             document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
         }
         </script>
-
+    <!-- 动态标题 -->
     <script type="text/javascript">
         var OriginTitile=document.title,st;
         document.addEventListener("visibilitychange",function(){
