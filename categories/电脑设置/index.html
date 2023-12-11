@@ -394,19 +394,19 @@
                 </a>
                 
                 
-                <a href="/categories/%E8%87%AA%E5%AE%9A%E4%B9%89/" title="自定义: 1">
+                <a href="/categories/%E7%94%B5%E8%84%91%E8%AE%BE%E7%BD%AE/" title="电脑设置: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">自定义
+                             chip-active "
+                            style="background-color: #F5EEF8;">电脑设置
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E7%94%B5%E8%84%91%E8%AE%BE%E7%BD%AE/" title="电脑设置: 1">
+                <a href="/categories/%E8%87%AA%E5%AE%9A%E4%B9%89/" title="自定义: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #D5F5E3;">电脑设置
+                             chip-default "
+                            style="background-color: #D5F5E3;">自定义
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -768,6 +768,13 @@ $(function () {
             document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
         }
         </script>
+
+    <script type="text/javascript">
+        var OriginTitile=document.title,st;
+        document.addEventListener("visibilitychange",function(){
+        document.hidden?(document.title="ヽ(●-`Д´-)ノ你要玩捉迷藏嘛",clearTimeout(st)):(document.title="(Ő∀Ő3)ノ好哦！",st=setTimeout(function(){document.title=OriginTitile},3e3))
+    })
+    </script>
 
 </body>
 

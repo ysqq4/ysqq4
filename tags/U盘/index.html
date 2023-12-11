@@ -384,28 +384,19 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="博客" style="background-color: #F9EBEA;">博客
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/QQ/" title="QQ: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="QQ" style="background-color: #F5EEF8;">QQ
+                            data-tagname="QQ" style="background-color: #F9EBEA;">QQ
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/U%E7%9B%98/" title="U盘: 1">
+                <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="U盘" style="background-color: #D5F5E3;">U盘
+                             chip-default "
+                            data-tagname="博客" style="background-color: #F5EEF8;">博客
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -414,7 +405,16 @@
                 <a href="/tags/%E7%94%B5%E8%84%91/" title="电脑: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="电脑" style="background-color: #E8F8F5;">电脑
+                            data-tagname="电脑" style="background-color: #D5F5E3;">电脑
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/U%E7%9B%98/" title="U盘: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="U盘" style="background-color: #E8F8F5;">U盘
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -760,6 +760,13 @@ $(function () {
             document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
         }
         </script>
+
+    <script type="text/javascript">
+        var OriginTitile=document.title,st;
+        document.addEventListener("visibilitychange",function(){
+        document.hidden?(document.title="ヽ(●-`Д´-)ノ你要玩捉迷藏嘛",clearTimeout(st)):(document.title="(Ő∀Ő3)ノ好哦！",st=setTimeout(function(){document.title=OriginTitile},3e3))
+    })
+    </script>
 
 </body>
 
