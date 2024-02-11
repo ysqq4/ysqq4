@@ -488,7 +488,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    2.1k
+                    3.4k
                 </div>
                 
 
@@ -590,7 +590,128 @@ hexo s
 
 
 <p>​        浏览器中打开<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> ，可以看到一个网页，说明Hexo博客已经成功在本地运行。</p>
-<h3 id="2-本地博客发布到Github-Pages"><a href="#2-本地博客发布到Github-Pages" class="headerlink" title="2.本地博客发布到Github Pages"></a>2.本地博客发布到Github Pages</h3><h2 id="五、hexo博客主题安装与修改"><a href="#五、hexo博客主题安装与修改" class="headerlink" title="五、hexo博客主题安装与修改"></a>五、hexo博客主题安装与修改</h2><h2 id="六、hexo博客美化"><a href="#六、hexo博客美化" class="headerlink" title="六、hexo博客美化"></a>六、hexo博客美化</h2><h2 id="七、添加评论系统"><a href="#七、添加评论系统" class="headerlink" title="七、添加评论系统"></a>七、添加评论系统</h2>
+<h3 id="2-本地博客发布到Github-Pages"><a href="#2-本地博客发布到Github-Pages" class="headerlink" title="2.本地博客发布到Github Pages"></a>2.本地博客发布到Github Pages</h3><h2 id="五、hexo博客主题安装与修改"><a href="#五、hexo博客主题安装与修改" class="headerlink" title="五、hexo博客主题安装与修改"></a>五、hexo博客主题安装与修改</h2><h3 id="1-主题下载与安装"><a href="#1-主题下载与安装" class="headerlink" title="1. 主题下载与安装"></a>1. 主题下载与安装</h3><p>​        点击 <a target="_blank" rel="noopener" href="https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master">网站</a> 下载 master 分支的最新稳定版的代码，解压缩后，将 hexo-theme-matery 的文件夹复制到你 Hexo 的 themes 文件夹中即可。</p>
+<p>  当然你也可以在你的站点目录文件夹下使用 git clone 命令来下载：直接在站点根目录下执行下面的命令，即可进行主题的下载，主题有两个版本，稳定版本和最新版本(不定期更新优化)，自主选择版本。</p>
+<pre>
+<code>
+git clone https://github.com/blinkfox/hexo-theme-matery themes/matery     # 稳定版
+git clone -b develop https://github.com/blinkfox/hexo-theme-matery themes/matery   #最新版(不定期进行优化更新)
+</code>
+</pre>
+
+<h3 id="2-主题配置"><a href="#2-主题配置" class="headerlink" title="2. 主题配置"></a>2. 主题配置</h3><h4 id="2-1-切换主题"><a href="#2-1-切换主题" class="headerlink" title="2.1 切换主题"></a>2.1 切换主题</h4><p>  <strong>注意：</strong>首先需要明白什么是站点配置文件，什么是主题配置文件，站点配置文件就是根目录下的配置文件，比如我的博客文件在F:\blog下，那么站点配置文件就是F:\blog_config.yml，主题配置文件就是F:\blog\themes\matery_config.yml。</p>
+<p>  另外注意，配置文件中的标点符号不要出现中文格式的标点符号，不然运行会出错。</p>
+<p>  主题下载完成后，将站点配置文件中的theme值修改为你下载主题的文件名，此处为matery，那么值就修改为theme: matery。</p>
+<p>  一些站点配置文件的其他地方的修改：</p>
+<p>  语言选择：如果为中文用户，则在language:后添加值zh-CN，如果不修改，默认为英语；<br>  网址修改：url:的值为你的网址名，如<a target="_blank" rel="noopener" href="http://xxxx.github.io,如果有域名,则修改为你的域名即可,至于有关域名的修改解析,后面我会说到,这里先不说了./">http://xxxx.github.io，如果有域名，则修改为你的域名即可，至于有关域名的修改解析，后面我会说到，这里先不说了。</a><br>  站点配置文件有个per_page属性，建议修改为6的倍数，这样网站在适应设备时，有较好的显示效果。</p>
+<h4 id="2-2-新建标签-tags-页面"><a href="#2-2-新建标签-tags-页面" class="headerlink" title="2.2 新建标签 tags 页面"></a>2.2 新建标签 tags 页面</h4><p>​        tags 页是用来展示所有标签的页面，如果在你的博客 source 目录下还没有 tags&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
+<pre>
+<code>
+    hexo new page "tags"    
+</code>
+</pre>
+
+<p>​        编辑你刚刚新建的页面文件 &#x2F;source&#x2F;tags&#x2F;index.md，至少需要以下内容：</p>
+<pre>
+<code>
+---
+title: tags
+date: 2024-09-30 18:23:38
+type: "tags"
+layout: "tags"
+--- 
+</code>
+</pre>
+
+<h4 id="2-3-新建分类-categories-页面"><a href="#2-3-新建分类-categories-页面" class="headerlink" title="2.3 新建分类 categories 页面"></a>2.3 新建分类 categories 页面</h4><p>  categories 页是用来展示所有分类的页面，如果在你的博客 source 目录下还没有 categories&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
+<pre>
+<code>
+    hexo new page "categories" 
+</code>
+</pre>
+
+<p>​        编辑你刚刚新建的页面文件 &#x2F;source&#x2F;categories&#x2F;index.md，至少需要以下内容：</p>
+<pre>
+<code>
+---
+title: categories
+date: 2024-09-30 17:25:30
+type: "categories"
+layout: "categories"
+---
+</code>
+</pre>
+
+<h4 id="2-4-新建关于我-about-页面"><a href="#2-4-新建关于我-about-页面" class="headerlink" title="2.4 新建关于我 about 页面"></a>2.4 新建关于我 about 页面</h4><p>  about 页是用来展示关于我和我的博客信息的页面，如果在你的博客 source 目录下还没有 about&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
+<pre>
+<code>
+    hexo new page "about"
+</code>
+</pre>
+
+<p>​        编辑你刚刚新建的页面文件 &#x2F;source&#x2F;about&#x2F;index.md，至少需要以下内容：</p>
+<pre>
+<code>
+---
+title: about
+date: 2024-09-30 17:25:30
+type: "about"
+layout: "about"
+---
+</code>
+</pre>
+
+
+
+<h4 id="2-5-新建留言板-contact-页面-可选"><a href="#2-5-新建留言板-contact-页面-可选" class="headerlink" title="2.5 新建留言板 contact 页面 (可选)"></a>2.5 新建留言板 contact 页面 (可选)</h4><p>  contact 页是用来展示留言板信息的页面，如果在你的博客 source 目录下还没有 contact&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
+<pre>
+<code>
+    hexo new page "contact"
+</code>
+</pre>
+
+<p>  编辑你刚刚新建的页面文件 &#x2F;source&#x2F;contact&#x2F;index.md，至少需要以下内容：</p>
+<pre>
+<code>
+---
+title: contact
+date: 2018-09-30 17:25:30
+type: "contact"
+layout: "contact"
+---
+</code>
+</pre>
+
+<p>  <strong>注意：</strong>本留言板功能依赖于第三方评论系统，请激活你的评论系统才有效果。并且在主题的 _config.yml 文件中，第 19 至 21 行的“菜单”配置，取消关于留言板的注释即可。</p>
+<h4 id="2-6-新建友情链接-friends-页面-可选"><a href="#2-6-新建友情链接-friends-页面-可选" class="headerlink" title="2.6 新建友情链接 friends 页面 (可选)"></a>2.6 新建友情链接 friends 页面 (可选)</h4><p>​        friends 页是用来展示友情链接信息的页面，如果在你的博客 source 目录下还没有 friends&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
+<pre>
+<code>
+    hexo new page "friends"
+</code>
+</pre>
+
+<p>  编辑你刚刚新建的页面文件 &#x2F;source&#x2F;friends&#x2F;index.md，至少需要以下内容：</p>
+<pre>
+<code>
+---
+title: friends
+date: 2018-12-12 21:25:30
+type: "friends"
+layout: "friends"
+---
+</code>
+</pre>
+
+<p>  同时，在你的博客 source 目录下新建 _data 目录，在 _data 目录中新建 friends.json 文件，文件内容如下所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">  [&#123;</span><br><span class="line">    <span class="string">&quot;avatar&quot;</span>: <span class="string">&quot;http://image.luokangyuan.com/1_qq_27922023.jpg&quot;</span>,</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;码酱&quot;</span>,</span><br><span class="line">    <span class="string">&quot;introduction&quot;</span>: <span class="string">&quot;我不是大佬，只是在追寻大佬的脚步&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;http://luokangyuan.com/&quot;</span>,</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;前去学习&quot;</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">    <span class="string">&quot;avatar&quot;</span>: <span class="string">&quot;http://image.luokangyuan.com/4027734.jpeg&quot;</span>,</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;闪烁之狐&quot;</span>,</span><br><span class="line">    <span class="string">&quot;introduction&quot;</span>: <span class="string">&quot;编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://blinkfox.github.io/&quot;</span>,</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;前去学习&quot;</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">    <span class="string">&quot;avatar&quot;</span>: <span class="string">&quot;http://image.luokangyuan.com/avatar.jpg&quot;</span>,</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;ja_rome&quot;</span>,</span><br><span class="line">    <span class="string">&quot;introduction&quot;</span>: <span class="string">&quot;平凡的脚步也可以走出伟大的行程&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://me.csdn.net/jlh912008548&quot;</span>,</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;前去学习&quot;</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h2 id="六、hexo博客美化"><a href="#六、hexo博客美化" class="headerlink" title="六、hexo博客美化"></a>六、hexo博客美化</h2><h2 id="七、添加评论系统"><a href="#七、添加评论系统" class="headerlink" title="七、添加评论系统"></a>七、添加评论系统</h2>
                 
             </div>
             <hr/>
@@ -1110,7 +1231,7 @@ hexo s
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2023</span>
+                <span id="year">2019-2024</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">乔木</a>
