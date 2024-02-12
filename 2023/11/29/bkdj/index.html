@@ -609,7 +609,6 @@ cd <新建文件夹的名称>
 npm install  # 安装博客所需要的依赖文件
 </code>
 </pre>
-
 <p>[图片]</p>
 <p>[图片]</p>
 <p>​        等待运行完成，此时文件夹中多了许多文件。</p>
@@ -664,9 +663,10 @@ layout: "tags"
 <h4 id="2-3-新建分类-categories-页面"><a href="#2-3-新建分类-categories-页面" class="headerlink" title="2.3 新建分类 categories 页面"></a>2.3 新建分类 categories 页面</h4><p>  categories 页是用来展示所有分类的页面，如果在你的博客 source 目录下还没有 categories&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
 <pre class="language-bash">
 <code class="language-bash">
-    hexo new page "categories" 
+hexo new page "categories" 
 </code>
 </pre>
+
 
 
 <p>​        编辑你刚刚新建的页面文件 &#x2F;source&#x2F;categories&#x2F;index.md，至少需要以下内容：</p>
@@ -708,9 +708,10 @@ layout: "about"
 <h4 id="2-5-新建留言板-contact-页面-可选"><a href="#2-5-新建留言板-contact-页面-可选" class="headerlink" title="2.5 新建留言板 contact 页面 (可选)"></a>2.5 新建留言板 contact 页面 (可选)</h4><p>  contact 页是用来展示留言板信息的页面，如果在你的博客 source 目录下还没有 contact&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
 <pre class="language-bash">
 <code class="language-bash">
-    hexo new page "contact"
+hexo new page "contact"
 </code>
 </pre>
+
 
 
 <p>  编辑你刚刚新建的页面文件 &#x2F;source&#x2F;contact&#x2F;index.md，至少需要以下内容：</p>
@@ -729,10 +730,11 @@ layout: "contact"
 <p>  <strong>注意：</strong>本留言板功能依赖于第三方评论系统，请激活你的评论系统才有效果。并且在主题的 _config.yml 文件中，第 19 至 21 行的“菜单”配置，取消关于留言板的注释即可。</p>
 <h4 id="2-6-新建友情链接-friends-页面-可选"><a href="#2-6-新建友情链接-friends-页面-可选" class="headerlink" title="2.6 新建友情链接 friends 页面 (可选)"></a>2.6 新建友情链接 friends 页面 (可选)</h4><p>​        friends 页是用来展示友情链接信息的页面，如果在你的博客 source 目录下还没有 friends&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
 <pre class="language-bash">
-<code>
-    hexo new page "friends"
+<code class="language-bash">
+hexo new page "friends"
 </code>
 </pre>
+
 
 
 <p>  编辑你刚刚新建的页面文件 &#x2F;source&#x2F;friends&#x2F;index.md，至少需要以下内容：</p>
@@ -845,9 +847,10 @@ layout: "friends"
 <h4 id="2-8-添加emoji表情支持（可选的）"><a href="#2-8-添加emoji表情支持（可选的）" class="headerlink" title="2.8 添加emoji表情支持（可选的）"></a>2.8 添加emoji表情支持（可选的）</h4><p>  本主题新增了对emoji表情的支持，使用到了 hexo-filter-github-emojis 的 Hexo 插件来支持 emoji表情的生成，把对应的markdown emoji语法（::,例如：:smile:）转变成会跳跃的emoji表情，安装命令如下：</p>
 <pre class="language-bash">
 <code class="language-bash">
-    npm install hexo-filter-github-emojis --save
+npm install hexo-filter-github-emojis --save
 </code>
 </pre>
+
 
 
 
@@ -869,9 +872,10 @@ layout: "friends"
 <h4 id="2-9-代码高亮"><a href="#2-9-代码高亮" class="headerlink" title="2.9 代码高亮"></a>2.9 代码高亮</h4><p>  由于 Hexo 自带的代码高亮主题显示不好看，所以主题中使用到了 hexo-prism-plugin 的 Hexo 插件来做代码高亮，安装命令如下：</p>
 <pre class="language-bash">
 <code class="language-bash">
-    npm i -S hexo-prism-plugin
+npm i -S hexo-prism-plugin
 </code>
 </pre>
+
 
 
 <p>  然后，修改 Hexo 根目录下 _config.yml 文件中 highlight.enable 的值为 false，并新增 prism 插件相关的配置，主要配置如下：</p>
@@ -889,9 +893,10 @@ prism_plugin:
 <h4 id="2-10-搜索"><a href="#2-10-搜索" class="headerlink" title="2.10 搜索"></a>2.10 搜索</h4><p>  本主题中还使用到了 hexo-generator-search 的 Hexo 插件来做内容搜索，安装命令如下：</p>
 <pre class="language-bash">
 <code class="language-bash">
-    npm install hexo-generator-search --save
+npm install hexo-generator-search --save
 </code>
 </pre>
+
 
 
 <p>  在 Hexo 根目录下的 _config.yml 文件中，新增以下的配置项：</p>
@@ -908,9 +913,10 @@ search:
 <p>  安装命令如下：</p>
 <pre class="language-bash">
 <code class="language-bash">
-    npm i hexo-permalink-pinyin --save
+npm i hexo-permalink-pinyin --save
 </code>
 </pre>
+
 
 
 <p>在 Hexo 根目录下的 _config.yml 文件中，新增以下的配置项：</p>
@@ -928,9 +934,10 @@ permalink_pinyin:
 <p>  安装命令如下：</p>
 <pre class="language-bash">
 <code class="language-bash">
-    npm i --save hexo-wordcount
+npm i --save hexo-wordcount
 </code>
 </pre>
+
 
 
 
@@ -949,9 +956,10 @@ wordCount:
 <h4 id="2-13-添加-RSS-订阅支持（可选的）"><a href="#2-13-添加-RSS-订阅支持（可选的）" class="headerlink" title="2.13 添加 RSS 订阅支持（可选的）"></a>2.13 添加 RSS 订阅支持（可选的）</h4><p>  本主题中还使用到了 hexo-generator-feed 的 Hexo 插件来做 RSS，安装命令如下：</p>
 <pre class="language-bash">
 <code class="language-bash">
-    npm install hexo-generator-feed --save
+npm install hexo-generator-feed --save
 </code>
 </pre>
+
 
 
 <p>  在 Hexo 根目录下的 _config.yml 文件中，新增以下的配置项：</p>
@@ -977,15 +985,18 @@ feed:
 <h4 id="2-17-修改社交链接"><a href="#2-17-修改社交链接" class="headerlink" title="2.17 修改社交链接"></a>2.17 修改社交链接</h4><p>  在主题的 _config.yml 文件中，默认支持 QQ、GitHub 和邮箱等的配置，你可以在主题文件的 &#x2F;layout&#x2F;_partial&#x2F;social-link.ejs 文件中，新增、修改你需要的社交链接地址，增加链接可参考如下代码：</p>
 <pre class="language-bash">
 <code class="language-bash">
-    <p>
-      <% if (theme.socialLink.github) &#123; %>
-      <a href="<%= theme.socialLink.github %>" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-          <i class="fab fa-github"></i>
-      </a>
-  <% &#125; %>
-</p>
+    <textarea>
+    <% if (theme.socialLink.github) &#123; %>
+    <a href="<%= theme.socialLink.github %>" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+<% &#125; %>
+    </textarea>
 </code>
 </pre>
+
+
+
 
 
 
