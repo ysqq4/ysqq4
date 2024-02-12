@@ -488,7 +488,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    5.4k
+                    4.2k
                 </div>
                 
 
@@ -521,14 +521,15 @@
 <p>​        如果执行node -v报错的话，那么手动将Node.js的安装路径添加到环境变量中，右键点击我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量，在系统变量下找到名为path的变量名，如下图：</p>
 <p>[图片]</p>
 <p>​        选中path，或者双击，然后将你node.js的安装路径放在path变量值的最后面，如果添加之前path值最后有英文的分号，则直接将路径添加进去即可，如果没有，先添加英文的分号，然后点击保存，回到桌面，打开cmd(Win+R)，执行node -v，看是否成功。</p>
-<h5 id="1-1-9-设置npm的镜像源："><a href="#1-1-9-设置npm的镜像源：" class="headerlink" title="1.1.9.设置npm的镜像源："></a>1.1.9.设置npm的镜像源：</h5><h5 id="1-1-10-设置npm的内置路径—-gt-全局模块路径和缓存路径-可选"><a href="#1-1-10-设置npm的内置路径—-gt-全局模块路径和缓存路径-可选" class="headerlink" title="1.1.10.设置npm的内置路径—&gt;全局模块路径和缓存路径(可选)"></a>1.1.10.设置npm的内置路径—&gt;全局模块路径和缓存路径(可选)</h5><pre>
-<code>
+<h5 id="1-1-9-设置npm的镜像源："><a href="#1-1-9-设置npm的镜像源：" class="headerlink" title="1.1.9.设置npm的镜像源："></a>1.1.9.设置npm的镜像源：</h5><h5 id="1-1-10-设置npm的内置路径—-gt-全局模块路径和缓存路径-可选"><a href="#1-1-10-设置npm的内置路径—-gt-全局模块路径和缓存路径-可选" class="headerlink" title="1.1.10.设置npm的内置路径—&gt;全局模块路径和缓存路径(可选)"></a>1.1.10.设置npm的内置路径—&gt;全局模块路径和缓存路径(可选)</h5><pre class="language-bash">
+<code class="language-bash">
 npm包全局目录：C:/Users/[username]/AppData/Roaming/npm/node_modules
 npm包全局命令目录：C:/Users/[username]/AppData/Roaming/npm
 npm实际去找全局命令的目录：C:/Users/[username]/.npmrc 文件内容的prefix值
 npm包全局cache目录：C:/Users/[username]/.npmrc 文件内容的cache值
 </code>
 </pre>
+
 
 <p>​        首先在你Node.js的安装位置，新建两个文件夹，node_global和node_cache，我的路径是：</p>
 <pre class="language-bash">
@@ -539,12 +540,13 @@ C:\Program Files\nodejs\node_cache
 </pre>
 
 <p>然后分别执行的命令就是：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 npm config set prefix"C:\Program Files\nodejs\node_global"
 npm config set cache "C:\Program Files\nodejs\node_cache"
 </code>
 </pre>
+
 
 <p>​        然后在配置环境变量，右击我的电脑 -&gt;属性 -&gt; 高级系统设置 -&gt; 环境变量同样的位置，在用户变量的地方，找到path变量进行修改，修改值如下图：</p>
 <p>[图片]</p>
@@ -586,18 +588,19 @@ npm config set cache "C:\Program Files\nodejs\node_cache"
 <h2 id="三、配置Git用户名和邮箱"><a href="#三、配置Git用户名和邮箱" class="headerlink" title="三、配置Git用户名和邮箱"></a>三、配置Git用户名和邮箱</h2><p>​        在桌面点击鼠标右键(或者在博客目录下)，点击Git Bash Here，会出现一个界面如下图所示：</p>
 <p>[图片]</p>
 <p>​        然后分别输入下面的两个命令，并回车：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 git config --global user.name "此处填写你注册时的用户名"
 git config --global user.email "此处填写你注册时的邮箱"
 # 一般只要不报错，可以跳过下面寻找.gitconfig文件
 </code>
 </pre>
+
 <p>​        然后找到.gitconfig文件，文件存放位置在C:&#x2F;Users&#x2F;[username]&#x2F;.gitconfig(未找到的话，请开启显示隐藏文件的功能)，用编辑器打开，看到如下图所示的内容，即配置成功！</p>
 <p>[图片]</p>
 <h2 id="四、本地安装以及发布"><a href="#四、本地安装以及发布" class="headerlink" title="四、本地安装以及发布"></a>四、本地安装以及发布</h2><h3 id="1-安装到本地"><a href="#1-安装到本地" class="headerlink" title="1.安装到本地"></a>1.安装到本地</h3><p>​        首先选择一个磁盘作为你博客文件的存放位置，然后新建一个文件夹，比如名为blogtext的文件夹，创建完后，先不点进去，在此处点击鼠标右键，选择Git Bash Here，然后依次输入如下命令：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 # hexo框架的安装
 npm install -g hexo-cli
 # 等上一个命令完成后，在输入下面的命令
@@ -606,28 +609,31 @@ cd <新建文件夹的名称>
 npm install  # 安装博客所需要的依赖文件
 </code>
 </pre>
+
 <p>[图片]</p>
 <p>[图片]</p>
 <p>​        等待运行完成，此时文件夹中多了许多文件。</p>
 <p>​        注意：后续的命令均需要在站点目录下(即文件夹内)使用Git Bash运行。</p>
 <p>​        此时Hexo框架的本地搭建已经完成了。我们来运行一下看看，命令行依次输入以下命令：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 # 注意空格
 hexo g
 hexo s
 </code>
 </pre>
+
 <p>[图片]</p>
 <p>​        浏览器中打开<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> ，可以看到一个网页，说明Hexo博客已经成功在本地运行。</p>
 <h3 id="2-本地博客发布到Github-Pages"><a href="#2-本地博客发布到Github-Pages" class="headerlink" title="2.本地博客发布到Github Pages"></a>2.本地博客发布到Github Pages</h3><h2 id="五、hexo博客主题安装与修改"><a href="#五、hexo博客主题安装与修改" class="headerlink" title="五、hexo博客主题安装与修改"></a>五、hexo博客主题安装与修改</h2><h3 id="1-主题下载与安装"><a href="#1-主题下载与安装" class="headerlink" title="1. 主题下载与安装"></a>1. 主题下载与安装</h3><p>​        点击 <a target="_blank" rel="noopener" href="https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master">网站</a> 下载 master 分支的最新稳定版的代码，解压缩后，将 hexo-theme-matery 的文件夹复制到你 Hexo 的 themes 文件夹中即可。</p>
 <p>  当然你也可以在你的站点目录文件夹下使用 git clone 命令来下载：直接在站点根目录下执行下面的命令，即可进行主题的下载，主题有两个版本，稳定版本和最新版本(不定期更新优化)，自主选择版本。</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 git clone https://github.com/blinkfox/hexo-theme-matery themes/matery     # 稳定版
 git clone -b develop https://github.com/blinkfox/hexo-theme-matery themes/matery   #最新版(不定期进行优化更新)
 </code>
 </pre>
+
 
 <h3 id="2-主题配置"><a href="#2-主题配置" class="headerlink" title="2. 主题配置"></a>2. 主题配置</h3><h4 id="2-1-切换主题"><a href="#2-1-切换主题" class="headerlink" title="2.1 切换主题"></a>2.1 切换主题</h4><p>  <strong>注意：</strong>首先需要明白什么是站点配置文件，什么是主题配置文件，站点配置文件就是根目录下的配置文件，比如我的博客文件在F:\blog下，那么站点配置文件就是F:\blog_config.yml，主题配置文件就是F:\blog\themes\matery_config.yml。</p>
 <p>  另外注意，配置文件中的标点符号不要出现中文格式的标点符号，不然运行会出错。</p>
@@ -635,15 +641,16 @@ git clone -b develop https://github.com/blinkfox/hexo-theme-matery themes/matery
 <p>  一些站点配置文件的其他地方的修改：</p>
 <p>  语言选择：如果为中文用户，则在language:后添加值zh-CN，如果不修改，默认为英语；<br>  网址修改：url:的值为你的网址名，如<a target="_blank" rel="noopener" href="http://xxxx.github.io,如果有域名,则修改为你的域名即可,至于有关域名的修改解析,后面我会说到,这里先不说了./">http://xxxx.github.io，如果有域名，则修改为你的域名即可，至于有关域名的修改解析，后面我会说到，这里先不说了。</a><br>  站点配置文件有个per_page属性，建议修改为6的倍数，这样网站在适应设备时，有较好的显示效果。</p>
 <h4 id="2-2-新建标签-tags-页面"><a href="#2-2-新建标签-tags-页面" class="headerlink" title="2.2 新建标签 tags 页面"></a>2.2 新建标签 tags 页面</h4><p>​        tags 页是用来展示所有标签的页面，如果在你的博客 source 目录下还没有 tags&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     hexo new page "tags"    
 </code>
 </pre>
 
+
 <p>​        编辑你刚刚新建的页面文件 &#x2F;source&#x2F;tags&#x2F;index.md，至少需要以下内容：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 ---
 title: tags
 date: 2024-09-30 18:23:38
@@ -653,16 +660,18 @@ layout: "tags"
 </code>
 </pre>
 
+
 <h4 id="2-3-新建分类-categories-页面"><a href="#2-3-新建分类-categories-页面" class="headerlink" title="2.3 新建分类 categories 页面"></a>2.3 新建分类 categories 页面</h4><p>  categories 页是用来展示所有分类的页面，如果在你的博客 source 目录下还没有 categories&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     hexo new page "categories" 
 </code>
 </pre>
 
+
 <p>​        编辑你刚刚新建的页面文件 &#x2F;source&#x2F;categories&#x2F;index.md，至少需要以下内容：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 ---
 title: categories
 date: 2024-09-30 17:25:30
@@ -672,16 +681,18 @@ layout: "categories"
 </code>
 </pre>
 
+
 <h4 id="2-4-新建关于我-about-页面"><a href="#2-4-新建关于我-about-页面" class="headerlink" title="2.4 新建关于我 about 页面"></a>2.4 新建关于我 about 页面</h4><p>  about 页是用来展示关于我和我的博客信息的页面，如果在你的博客 source 目录下还没有 about&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     hexo new page "about"
 </code>
 </pre>
 
+
 <p>​        编辑你刚刚新建的页面文件 &#x2F;source&#x2F;about&#x2F;index.md，至少需要以下内容：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 ---
 title: about
 date: 2024-09-30 17:25:30
@@ -693,16 +704,18 @@ layout: "about"
 
 
 
+
 <h4 id="2-5-新建留言板-contact-页面-可选"><a href="#2-5-新建留言板-contact-页面-可选" class="headerlink" title="2.5 新建留言板 contact 页面 (可选)"></a>2.5 新建留言板 contact 页面 (可选)</h4><p>  contact 页是用来展示留言板信息的页面，如果在你的博客 source 目录下还没有 contact&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     hexo new page "contact"
 </code>
 </pre>
 
+
 <p>  编辑你刚刚新建的页面文件 &#x2F;source&#x2F;contact&#x2F;index.md，至少需要以下内容：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 ---
 title: contact
 date: 2018-09-30 17:25:30
@@ -712,17 +725,19 @@ layout: "contact"
 </code>
 </pre>
 
+
 <p>  <strong>注意：</strong>本留言板功能依赖于第三方评论系统，请激活你的评论系统才有效果。并且在主题的 _config.yml 文件中，第 19 至 21 行的“菜单”配置，取消关于留言板的注释即可。</p>
 <h4 id="2-6-新建友情链接-friends-页面-可选"><a href="#2-6-新建友情链接-friends-页面-可选" class="headerlink" title="2.6 新建友情链接 friends 页面 (可选)"></a>2.6 新建友情链接 friends 页面 (可选)</h4><p>​        friends 页是用来展示友情链接信息的页面，如果在你的博客 source 目录下还没有 friends&#x2F;index.md 文件，那么你就需要新建一个，命令如下：</p>
-<pre>
+<pre class="language-bash">
 <code>
     hexo new page "friends"
 </code>
 </pre>
 
+
 <p>  编辑你刚刚新建的页面文件 &#x2F;source&#x2F;friends&#x2F;index.md，至少需要以下内容：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 ---
 title: friends
 date: 2018-12-12 21:25:30
@@ -732,9 +747,10 @@ layout: "friends"
 </code>
 </pre>
 
+
 <p>  同时，在你的博客 source 目录下新建 _data 目录，在 _data 目录中新建 friends.json 文件，文件内容如下所示：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
   [&#123;
     "avatar": "http://image.luokangyuan.com/1_qq_27922023.jpg",
     "name": "码酱",
@@ -757,9 +773,10 @@ layout: "friends"
 </code>
 </pre>
 
+
 <h4 id="2-7-菜单导航配置"><a href="#2-7-菜单导航配置" class="headerlink" title="2.7 菜单导航配置"></a>2.7 菜单导航配置</h4><h5 id="2-7-1-配置基本菜单导航的名称、路径url和图标icon"><a href="#2-7-1-配置基本菜单导航的名称、路径url和图标icon" class="headerlink" title="2.7.1 配置基本菜单导航的名称、路径url和图标icon."></a>2.7.1 配置基本菜单导航的名称、路径url和图标icon.</h5><p>1.菜单导航名称可以是中文也可以是英文(如：Index或主页)<br>2.图标icon 可以在Font Awesome 中查找</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
       menu:
   Index:
     url: /
@@ -782,10 +799,11 @@ layout: "friends"
 </code>
 </pre>
 
+
 <h5 id="2-7-2-二级菜单配置方法"><a href="#2-7-2-二级菜单配置方法" class="headerlink" title="2.7.2. 二级菜单配置方法"></a>2.7.2. 二级菜单配置方法</h5><p>  如果你需要二级菜单则可以在原基本菜单导航的基础上如下操作</p>
 <p>1.在需要添加二级菜单的一级菜单下添加children关键字(如:About菜单下添加children)<br>2.在children下创建二级菜单的 名称name,路径url和图标icon.<br>3.注意每个二级菜单模块前要加 -.<br>4.注意缩进格式</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
       menu:
   Index:
     url: /
@@ -823,18 +841,20 @@ layout: "friends"
 </code>
 </pre>
 
+
 <h4 id="2-8-添加emoji表情支持（可选的）"><a href="#2-8-添加emoji表情支持（可选的）" class="headerlink" title="2.8 添加emoji表情支持（可选的）"></a>2.8 添加emoji表情支持（可选的）</h4><p>  本主题新增了对emoji表情的支持，使用到了 hexo-filter-github-emojis 的 Hexo 插件来支持 emoji表情的生成，把对应的markdown emoji语法（::,例如：:smile:）转变成会跳跃的emoji表情，安装命令如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     npm install hexo-filter-github-emojis --save
 </code>
 </pre>
 
 
 
+
 <p>  在 Hexo 根目录下的 _config.yml 文件中，新增以下的配置项：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
   githubEmojis:
   enable: true
   className: github-emoji
@@ -844,17 +864,19 @@ layout: "friends"
 </code>
 </pre>
 
+
 <p>  执行 hexo clean &amp;&amp; hexo g 重新生成博客文件，然后就可以在文章中对应位置看到你用emoji语法写的表情了。</p>
 <h4 id="2-9-代码高亮"><a href="#2-9-代码高亮" class="headerlink" title="2.9 代码高亮"></a>2.9 代码高亮</h4><p>  由于 Hexo 自带的代码高亮主题显示不好看，所以主题中使用到了 hexo-prism-plugin 的 Hexo 插件来做代码高亮，安装命令如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     npm i -S hexo-prism-plugin
 </code>
 </pre>
 
+
 <p>  然后，修改 Hexo 根目录下 _config.yml 文件中 highlight.enable 的值为 false，并新增 prism 插件相关的配置，主要配置如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
   theme: 'tomorrow'
@@ -863,51 +885,57 @@ prism_plugin:
 </code>
 </pre>
 
+
 <h4 id="2-10-搜索"><a href="#2-10-搜索" class="headerlink" title="2.10 搜索"></a>2.10 搜索</h4><p>  本主题中还使用到了 hexo-generator-search 的 Hexo 插件来做内容搜索，安装命令如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     npm install hexo-generator-search --save
 </code>
 </pre>
 
+
 <p>  在 Hexo 根目录下的 _config.yml 文件中，新增以下的配置项：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 search:
   path: search.xml
   field: post
 </code>
 </pre>
 
+
 <h4 id="2-11-中文链接转拼音（可选的）"><a href="#2-11-中文链接转拼音（可选的）" class="headerlink" title="2.11 中文链接转拼音（可选的）"></a>2.11 中文链接转拼音（可选的）</h4><p>  如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 SEO，且 gitment 评论对中文链接也不支持。我们可以用   hexo-permalink-pinyin Hexo 插件使在生成文章时生成中文拼音的永久链接。</p>
 <p>  安装命令如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     npm i hexo-permalink-pinyin --save
 </code>
 </pre>
 
+
 <p>在 Hexo 根目录下的 _config.yml 文件中，新增以下的配置项：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
 </code>
 </pre>
 
+
 <p><strong>注：</strong>除了此插件外，hexo-abbrlink 插件也可以生成非中文的链接。</p>
 <h4 id="2-12-文章字数统计插件（可选的）"><a href="#2-12-文章字数统计插件（可选的）" class="headerlink" title="2.12 文章字数统计插件（可选的）"></a>2.12 文章字数统计插件（可选的）</h4><p>  如果你想要在文章中显示文章字数、阅读时长信息，可以安装 hexo-wordcount插件。</p>
 <p>  安装命令如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash"
     npm i --save hexo-wordcount
 </code>
 </pre>
 
+
 <p>  然后只需在本主题下的 _config.yml 文件中，激活以下配置项即可：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 wordCount:
   enable: false # 将这个值设置为 true 即可.
   postWordCount: true
@@ -916,16 +944,18 @@ wordCount:
 </code>
 </pre>
 
+
 <h4 id="2-13-添加-RSS-订阅支持（可选的）"><a href="#2-13-添加-RSS-订阅支持（可选的）" class="headerlink" title="2.13 添加 RSS 订阅支持（可选的）"></a>2.13 添加 RSS 订阅支持（可选的）</h4><p>  本主题中还使用到了 hexo-generator-feed 的 Hexo 插件来做 RSS，安装命令如下：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     npm install hexo-generator-feed --save
 </code>
 </pre>
 
+
 <p>  在 Hexo 根目录下的 _config.yml 文件中，新增以下的配置项：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 feed:
   type: atom
   path: atom.xml
@@ -938,13 +968,14 @@ feed:
 </code>
 </pre>
 
+
 <p>  执行 hexo clean &amp;&amp; hexo g 重新生成博客文件，然后在 public 文件夹中即可看到 atom.xml 文件，说明你已经安装成功了。</p>
 <h4 id="2-14-添加-DaoVoice-在线聊天功能（可选的）"><a href="#2-14-添加-DaoVoice-在线聊天功能（可选的）" class="headerlink" title="2.14 添加 DaoVoice 在线聊天功能（可选的）"></a>2.14 添加 DaoVoice 在线聊天功能（可选的）</h4><p>  前往 <a target="_blank" rel="noopener" href="https://www.daocloud.io/">DaoVoice</a>官网注册并且获取 app_id，并将 app_id 填入主题的 _config.yml 文件中</p>
 <h4 id="2-15-添加-Tidio-在线聊天功能（可选的）"><a href="#2-15-添加-Tidio-在线聊天功能（可选的）" class="headerlink" title="2.15 添加 Tidio 在线聊天功能（可选的）"></a>2.15 添加 Tidio 在线聊天功能（可选的）</h4><p>  前往 <a target="_blank" rel="noopener" href="https://www.tidio.com/">Tidio</a>官网注册并且获取 Public Key，并将 Public Key 填入主题的 _config.yml 文件中。</p>
 <h4 id="2-16-修改页脚"><a href="#2-16-修改页脚" class="headerlink" title="2.16 修改页脚"></a>2.16 修改页脚</h4><p>  页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的 &#x2F;layout&#x2F;_partial&#x2F;footer.ejs 文件中，包括站点、使用的主题、访问量等。</p>
 <h4 id="2-17-修改社交链接"><a href="#2-17-修改社交链接" class="headerlink" title="2.17 修改社交链接"></a>2.17 修改社交链接</h4><p>  在主题的 _config.yml 文件中，默认支持 QQ、GitHub 和邮箱等的配置，你可以在主题文件的 &#x2F;layout&#x2F;_partial&#x2F;social-link.ejs 文件中，新增、修改你需要的社交链接地址，增加链接可参考如下代码：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     <% if (theme.socialLink.github) &#123; %>
     <a href="<%= theme.socialLink.github %>" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
@@ -953,13 +984,14 @@ feed:
 </code>
 </pre>
 
+
 <p>  其中，社交图标（如：fa-github）你可以在 Font Awesome 中搜索找到。以下是常用社交图标的标识，供你参考：</p>
 <p>Facebook: fab fa-facebook<br>Twitter: fab fa-twitter<br>Google-plus: fab fa-google-plus<br>Linkedin: fab fa-linkedin<br>Tumblr: fab fa-tumblr<br>Medium: fab fa-medium<br>Slack: fab fa-slack<br>Sina Weibo: fab fa-weibo<br>Wechat: fab fa-weixin<br>QQ: fab fa-qq<br>Zhihu: fab fa-zhihu<br>  <strong>注意:</strong> 本主题中使用的 Font Awesome 版本为 5.11.0。</p>
 <h4 id="2-18-修改打赏的二维码图片"><a href="#2-18-修改打赏的二维码图片" class="headerlink" title="2.18 修改打赏的二维码图片"></a>2.18 修改打赏的二维码图片</h4><p>  在主题文件的 source&#x2F;medias&#x2F;reward 文件中，你可以替换成你的的微信和支付宝的打赏二维码图片。</p>
 <h4 id="2-19-配置音乐播放器（可选的）"><a href="#2-19-配置音乐播放器（可选的）" class="headerlink" title="2.19 配置音乐播放器（可选的）"></a>2.19 配置音乐播放器（可选的）</h4><p>  要支持音乐播放，就必须开启音乐的播放配置和音乐数据的文件。</p>
 <p>  首先，在你的博客 source 目录下的 _data 目录（没有的话就新建一个）中新建 musics.json 文件，文件内容如下所示：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
     [&#123;
     "name": "五月雨变奏电音",
     "artist": "AnimeVibe",
@@ -979,10 +1011,11 @@ feed:
 </code>
 </pre>
 
+
 <p>  <strong>注：</strong>以上 JSON 中的属性：name、artist、url、cover 分别表示音乐的名称、作者、音乐文件地址、音乐封面。</p>
 <p>  然后，在主题的 _config.yml 配置文件中激活配置即可：</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 # 是否在首页显示音乐.
 music:
   enable: true
@@ -1000,11 +1033,12 @@ music:
 </code>
 </pre>
 
+
 <h3 id="3-文章-Front-matter-介绍"><a href="#3-文章-Front-matter-介绍" class="headerlink" title="3. 文章 Front-matter 介绍"></a>3. 文章 Front-matter 介绍</h3><p>  Front-matter 选项详解<br>  Front-matter 选项中的所有内容均为非必填的。但我仍然建议至少填写 title 和 date 的值。</p>
 <p>  您可以在文章md文件的 front-matter 中指定 reprintPolicy 来给单个文章配置转载规则<br>  以下为文章的 Front-matter 示例。</p>
 <p>  最简示例</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 ---
 title: typora-vue-theme主题介绍
 date: 2018-09-07 09:25:00
@@ -1012,9 +1046,10 @@ date: 2018-09-07 09:25:00
 </code>
 </pre>
 
+
 <p>  最全示例</p>
-<pre>
-<code>
+<pre class="language-bash">
+<code class="language-bash">
 ---
 title: typora-vue-theme主题介绍
 date: 2022-05-02 09:25:00
