@@ -19,8 +19,6 @@
     <title>Tags | 藤原豆腐店</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
-    <!-- 黑夜模式样式 css -->
-    <link rel="stylesheet" type="text/css" href="/css/day-night.css">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
@@ -386,28 +384,10 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/QQ/" title="QQ: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="QQ" style="background-color: #F9EBEA;">QQ
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="博客" style="background-color: #F5EEF8;">博客
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/U%E7%9B%98/" title="U盘: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="U盘" style="background-color: #D5F5E3;">U盘
+                            data-tagname="博客" style="background-color: #F9EBEA;">博客
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -416,7 +396,25 @@
                 <a href="/tags/%E7%94%B5%E8%84%91/" title="电脑: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="电脑" style="background-color: #E8F8F5;">电脑
+                            data-tagname="电脑" style="background-color: #F5EEF8;">电脑
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/QQ/" title="QQ: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="QQ" style="background-color: #D5F5E3;">QQ
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/U%E7%9B%98/" title="U盘: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="U盘" style="background-color: #E8F8F5;">U盘
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -445,7 +443,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"QQ","weight":1,"link":"/tags/QQ/"},{"text":"博客","weight":1,"link":"/tags/博客/"},{"text":"U盘","weight":1,"link":"/tags/U盘/"},{"text":"电脑","weight":1,"link":"/tags/电脑/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"博客","weight":1,"link":"/tags/博客/"},{"text":"电脑","weight":1,"link":"/tags/电脑/"},{"text":"QQ","weight":1,"link":"/tags/QQ/"},{"text":"U盘","weight":1,"link":"/tags/U盘/"}], {
         autoResize: true
     });
 </script>
@@ -754,93 +752,6 @@ $(function () {
         document.hidden?(document.title="ヽ(●-`Д´-)ノ你要玩捉迷藏嘛",clearTimeout(st)):(document.title="(Ő∀Ő3)ノ好哦！",st=setTimeout(function(){document.title=OriginTitile},3e3))
     })
     </script>
-    <!-- 主题切换 -->
-    <!-- 白天和黑夜主题 -->
-<div class="sum-moon-box">
-    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
-      <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
-    </a>
-  </div>
-  
-  <script>
-    // 在这里修改 isDark 变量过期的时间
-    var isDarkLiveHours = 6;
-  
-    function setCookie(name, value, hoursToLive) {
-      var cookie = name + "=" + encodeURIComponent(value);
-      
-      if (typeof hoursToLive === "number") {
-        cookie += ";path=/;max-age=" + (hoursToLive*60*60);
-      }
-  
-      document.cookie = cookie;
-    }
-  
-    function getCookie(name) {
-      // 拆分 cookie 字符串
-      var cookieArr = document.cookie.split(";");
-     
-      // 循环遍历数组元素
-      for(var i = 0; i < cookieArr.length; i++) {
-          var cookiePair = cookieArr[i].split("=");
-         
-          /* 删除 cookie 名称开头的空白并将其与给定字符串进行比较 */
-          if(name == cookiePair[0].trim()) {
-              // 解码cookie值并返回
-              return decodeURIComponent(cookiePair[1]);
-          }
-      }
-      // 如果未找到，则返回null
-      return null;
-    }
-  
-    function switchNightMode() {
-      $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
-      setTimeout(function() {
-        $('body').hasClass('DarkMode')
-        ? (
-          $('body').removeClass('DarkMode'),
-          setCookie('isDark', 'false', isDarkLiveHours),
-          $('#day-btn-icon-sun').css('display', 'none'),
-          $('#night-btn-icon-moon').css('display', 'inherit')
-        ) : (
-          $('body').addClass('DarkMode'),
-          setCookie('isDark', 'true', isDarkLiveHours),
-          $('#day-btn-icon-sun').css('display', 'inherit'),
-          $('#night-btn-icon-moon').css('display', 'none')
-        ),
-  
-        setTimeout(function () {
-          $('.Cuteen_DarkSky').fadeOut(1e3, function () {
-            $(this).remove()
-          })
-        }, 2e3);
-      });
-    }
-  
-    //黑夜模式自动开启功能（首次加载）
-    setTimeout(function () {
-      if (getCookie('isDark') == null) {
-        if ((new Date().getHours() >= 19 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
-          $('body').addClass('DarkMode');
-          setCookie('isDark', 'true', isDarkLiveHours);
-          $('#day-btn-icon-sun').css('display', 'inherit');
-          $('#night-btn-icon-moon').css('display', 'none');
-        }
-      } else {
-        if (getCookie('isDark') === 'true') {
-          document.body.classList.add('DarkMode');
-          $('#day-btn-icon-sun').css('display', 'inherit');
-          $('#night-btn-icon-moon').css('display', 'none');
-        } else {
-          document.body.classList.remove('DarkMode');
-          $('#day-btn-icon-sun').css('display', 'none');
-          $('#night-btn-icon-moon').css('display', 'inherit');
-        }
-      }
-  
-    }, 0);
-  </script>
 </body>
 
 </html>
