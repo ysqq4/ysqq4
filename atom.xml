@@ -71,16 +71,15 @@
     <link href="http://ysqq4.github.io/2023/10/04/upanicon/"/>
     <id>http://ysqq4.github.io/2023/10/04/upanicon/</id>
     <published>2023-10-04T03:03:18.000Z</published>
-    <updated>2024-02-12T13:44:07.008Z</updated>
+    <updated>2024-02-27T09:53:48.864Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="U盘自定义图标"><a href="#U盘自定义图标" class="headerlink" title="U盘自定义图标"></a>U盘自定义图标</h1><pre class="language-bash">创建一个新文件夹命名为autorun.inf内容为<code class="language-bash">[autorun]ICON=favicon.ico,0</code></pre><ul><li>其中的favicon.ico图片需要自己去免费的网站去转化</li><li>百度icon图片转换，找免费的就行</li><li>接着把autorun.inf和favicon.ico图片放入U盘根目录</li><li>注意:一定是要放在根目录</li><li>接着右键点击其中一个属性-&gt;隐藏-&gt;确定</li><li>最后把U盘拔出重新插入就大功告成了。</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="U盘自定义图标"><a href="#U盘自定义图标" class="headerlink" title="U盘自定义图标"></a>U盘自定义图标</h1><p>创建一个新文件夹命名为autorun.inf<br>内容为</p><pre class="language-bash"><code class="language-bash">[autorun]ICON=favicon.ico,0</code></pre><ul><li>其中的favicon.ico图片需要自己去免费的网站去转化</li><li>百度icon图片转换，找免费的就行</li><li>接着把autorun.inf和favicon.ico图片放入U盘根目录</li><li>注意:一定是要放在根目录</li><li>接着右键点击其中一个属性-&gt;隐藏-&gt;确定</li><li>最后把U盘拔出重新插入就大功告成了。</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;U盘自定义图标&quot;&gt;&lt;a href=&quot;#U盘自定义图标&quot; class=&quot;headerlink&quot; title=&quot;U盘自定义图标&quot;&gt;&lt;/a&gt;U盘自定义图标&lt;/h1&gt;&lt;pre class=&quot;language-bash&quot;&gt;
-创建一个新文件夹命名为autorun.inf
-内容</summary>
+    <summary type="html">&lt;h1 id=&quot;U盘自定义图标&quot;&gt;&lt;a href=&quot;#U盘自定义图标&quot; class=&quot;headerlink&quot; title=&quot;U盘自定义图标&quot;&gt;&lt;/a&gt;U盘自定义图标&lt;/h1&gt;&lt;p&gt;创建一个新文件夹命名为autorun.inf&lt;br&gt;内容为&lt;/p&gt;
+&lt;pre class=&quot;lang</summary>
       
     
     
